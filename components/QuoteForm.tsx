@@ -77,6 +77,7 @@ const QuoteForm: React.FC = () => {
           </form>
         </GlassCard>
        </div>
+  
     </section>
   );
 };

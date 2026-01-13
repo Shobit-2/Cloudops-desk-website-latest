@@ -41,6 +41,7 @@ const Navbar: React.FC = () => {
     { label: 'Expertise', id: 'expertise' },
     { label: 'Engagement', id: 'engagement' },
     { label: 'Support', id: 'support' },
+    { label: 'Career', id: 'Career' },
   ];
 
   return (
@@ -79,13 +80,13 @@ const Navbar: React.FC = () => {
 
         {/* Right Actions */}
         <div className="hidden md:flex items-center gap-4">
-          <button 
+          {/* <button 
             onClick={toggleTheme}
             className="p-2 rounded-full text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/5 transition-colors"
             aria-label="Toggle Theme"
           >
             {theme === Theme.DARK ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-          </button>
+          </button> */}
           
           <a href="#quote" onClick={(e) => handleNavClick(e, 'quote')}>
             <Button variant="primary" className="!py-2 !px-4 text-sm">

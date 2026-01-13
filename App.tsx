@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Expertise from './components/Expertise';
+import Testimonials from './components/Testimonials';
 import Engagement from './components/Engagement';
 import QuoteForm from './components/QuoteForm';
 import Footer from './components/Footer';
@@ -16,6 +17,7 @@ function App() {
         <Expertise />
         <Engagement />
         <QuoteForm />
+        <Testimonials />
       </main>
 
       <Footer />
