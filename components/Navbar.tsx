@@ -272,7 +272,9 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [theme, setTheme] = useState<Theme>(Theme.DARK);
+  const [theme, setTheme] = useState<Theme>(
+    document.documentElement.classList.contains('dark') ? Theme.DARK : Theme.LIGHT
+  );
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -284,6 +286,18 @@ const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === Theme.DARK ? Theme.LIGHT : Theme.DARK;
+    setTheme(newTheme);
+    if (newTheme === Theme.DARK) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  };
 
   const scrollToTop = () => {
     if (location.pathname !== '/') {
@@ -372,6 +386,14 @@ const Navbar: React.FC = () => {
 
         {/* Right Actions */}
         <div className="hidden md:flex items-center gap-4">
+          <button 
+            onClick={toggleTheme}
+            className="p-2 rounded-full text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/5 transition-colors"
+            aria-label="Toggle Theme"
+          >
+            {theme === Theme.DARK ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+          </button>
+          
           <a href="#quote" onClick={(e) => handleNavClick(e, { id: 'quote' })}>
             <Button variant="primary" className="!py-2 !px-4 text-sm">
               Let's Talk
