@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   cloudops-desk:
     build:
@@ -18,7 +16,7 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 40s
+      start_period: 20s
     labels:
       - "com.cloudops.description=CloudOps Desk Website"
       - "com.cloudops.version=1.0.0"

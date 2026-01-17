@@ -12,82 +12,78 @@ const Engagement: React.FC = () => {
   };
 
   return (
-    <section id="engagement" className="py-24 relative overflow-hidden">
-      {/* Decorative Blur */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-sky-500/5 dark:bg-sky-900/10 rounded-full blur-[100px] -z-10" />
+    <section id="engagement" className="py-32 relative overflow-hidden bg-slate-50/50 dark:bg-slate-900/10">
+
+      {/* Background Decorative Elements */}
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-primary-500/10 rounded-full blur-[100px] -z-10" />
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-96 h-96 bg-accent-500/10 rounded-full blur-[100px] -z-10" />
 
       <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-16 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">Engagement Models</h2>
-          <p className="text-slate-600 dark:text-slate-400">Flexible structures for startups and enterprises.</p>
+        <div className="mb-20 text-center space-y-4">
+          <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tight">Strategic Partnerships</h2>
+          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg font-medium">Flexible structures designed to accelerate technical growth and operational excellence.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          {/* Card 1: Hourly */}
-          <div className="flex flex-col">
-            <GlassCard className="h-full flex flex-col justify-between hover:border-slate-300 dark:hover:border-white/20">
-              <div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Hourly</h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm mb-6">On-demand troubleshooting and optimization.</p>
-                <ul className="space-y-4 mb-8">
-                  {['Pay-as-you-go', 'No long-term contracts', 'Emergency Support', 'Task-based execution'].map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-slate-700 dark:text-slate-300">
-                      <Check className="w-4 h-4 text-sky-500 dark:text-sky-400" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+
+          {/* Card 1: On-Demand */}
+          <GlassCard className="p-10 flex flex-col group transition-all" hoverEffect>
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Hourly Support</h3>
+              <p className="text-slate-500 font-medium">Perfect for surgical interventions.</p>
+            </div>
+            <ul className="space-y-5 mb-10 flex-grow">
+              {['Emergency Troubleshooting', 'Performance Optimization', 'Security Hardening', 'No long-term commitment'].map((item) => (
+                <li key={item} className="flex items-center gap-3 text-slate-600 dark:text-slate-300 font-medium">
+                  <Check className="w-5 h-5 text-primary-500" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <Button onClick={scrollToQuote} variant="secondary" className="w-full justify-center !py-4 font-bold border-slate-200 dark:border-white/10 group-hover:bg-slate-100 dark:group-hover:bg-white/5 transition-colors">Initialize Support</Button>
+          </GlassCard>
+
+          {/* Card 2: Retainer (The Prize) */}
+          <div className="relative group/card transform lg:-translate-y-6">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary-500 to-accent-500 rounded-[2.5rem] blur opacity-30 group-hover/card:opacity-50 transition duration-500" />
+            <GlassCard className="p-10 flex flex-col h-full bg-slate-900/95 dark:bg-slate-900/90 border-primary-500/50 relative overflow-hidden" hoverEffect={false}>
+              <div className="absolute top-0 right-0 px-6 py-2 bg-gradient-to-r from-primary-500 to-accent-500 rounded-bl-2xl">
+                <span className="text-[10px] font-black text-white uppercase tracking-[0.2em]">High Value</span>
               </div>
-              <Button onClick={scrollToQuote} variant="secondary" className="w-full justify-center">Get Custom Quote</Button>
+              <div className="mb-8">
+                <h3 className="text-3xl font-black text-white mb-2">Elite Retainer</h3>
+                <p className="text-primary-300 font-bold uppercase text-[10px] tracking-widest">Your Dedicated Engineering Partner</p>
+              </div>
+              <ul className="space-y-5 mb-10 flex-grow">
+                {['Dedicated DevOps Architect', '24/7 Priority Response', 'Unlimited Deployments', 'Custom IaC Modules', 'Internal Team Coaching'].map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-white font-medium">
+                    <div className="p-1 bg-primary-500/20 rounded-full">
+                      <Check className="w-4 h-4 text-primary-400" />
+                    </div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Button onClick={scrollToQuote} variant="primary" className="w-full justify-center !py-5 text-lg font-black shadow-xl shadow-primary-500/30">Secure Your Slot</Button>
             </GlassCard>
           </div>
 
-          {/* Card 2: Retainer (Highlighted) */}
-          <div className="relative flex flex-col transform md:-translate-y-4">
-             {/* Glow Effect */}
-            <div className="absolute -inset-1 bg-gradient-to-b from-sky-400 to-indigo-500 rounded-3xl blur opacity-20" />
-            
-            <GlassCard className="h-full flex flex-col justify-between bg-slate-900/90 dark:bg-slate-900/80 border-sky-500/30 shadow-2xl relative">
-               <div className="absolute top-0 right-0 p-4">
-                 <span className="bg-sky-500 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Most Popular</span>
-               </div>
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-2">Retainer & Project</h3>
-                <p className="text-slate-300 dark:text-slate-400 text-sm mb-6">Dedicated resources for scaling infrastructure.</p>
-                <ul className="space-y-4 mb-8">
-                  {['Dedicated DevOps Engineer', 'Architecture Design', '24/7 Monitoring Setup', 'Priority SLA Support', 'Weekly Strategy Calls'].map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-white">
-                      <div className="p-1 bg-sky-500/20 rounded-full">
-                        <Check className="w-3 h-3 text-sky-400" />
-                      </div>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <Button onClick={scrollToQuote} variant="primary" className="w-full justify-center shadow-lg shadow-sky-500/20">Get Custom Quote</Button>
-            </GlassCard>
-          </div>
-
-          {/* Card 3: Training */}
-          <div className="flex flex-col">
-            <GlassCard className="h-full flex flex-col justify-between hover:border-slate-300 dark:hover:border-white/20">
-              <div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Guidance & Training</h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm mb-6">Empower your internal team.</p>
-                <ul className="space-y-4 mb-8">
-                  {['Team Workshops', 'Code Reviews', 'Best Practices Audit', 'Documentation Setup'].map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-slate-700 dark:text-slate-300">
-                      <Check className="w-4 h-4 text-sky-500 dark:text-sky-400" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <Button onClick={scrollToQuote} variant="secondary" className="w-full justify-center">Get Custom Quote</Button>
-            </GlassCard>
-          </div>
+          {/* Card 3: Project-Based */}
+          <GlassCard className="p-10 flex flex-col group transition-all" hoverEffect>
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Infrastructure Audit</h3>
+              <p className="text-slate-500 font-medium">Strategic roadmap for scaling.</p>
+            </div>
+            <ul className="space-y-5 mb-10 flex-grow">
+              {['Comprehensive Tech Audit', 'Cost Reduction Engine', 'Security & Compliance Scan', 'Scalability Roadmap', 'Post-Audit Execution Plan'].map((item) => (
+                <li key={item} className="flex items-center gap-3 text-slate-600 dark:text-slate-300 font-medium">
+                  <Check className="w-5 h-5 text-primary-500" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <Button onClick={scrollToQuote} variant="secondary" className="w-full justify-center !py-4 font-bold border-slate-200 dark:border-white/10 group-hover:bg-slate-100 dark:group-hover:bg-white/5 transition-colors">Start Audit</Button>
+          </GlassCard>
 
         </div>
       </div>

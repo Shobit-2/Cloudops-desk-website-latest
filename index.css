@@ -6,9 +6,29 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Outfit', 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+/* Premium Noise Texture Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+
+.dark body::before {
+  opacity: 0.25;
 }
 
 /* Custom scrollbar for light mode */
@@ -17,38 +37,57 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9; /* Light mode track */
+  background: #f1f5f9;
 }
 
 .dark ::-webkit-scrollbar-track {
-  background: #0f172a; /* Dark mode track */
+  background: #0f172a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1; /* Light mode thumb */
+  background: #cbd5e1;
   border-radius: 4px;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: #334155; /* Dark mode thumb */
+  background: #334155;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8; /* Light mode hover */
+  background: #94a3b8;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #475569; /* Dark mode hover */
+  background: #475569;
+}
+
+/* Text Gradient Utilities */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 via-primary-500 to-primary-400 dark:from-white dark:via-blue-200 dark:to-blue-400;
+}
+
+.text-gradient-indigo {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-primary-500 dark:from-indigo-300 dark:to-primary-300;
 }
 
 /* Smooth transitions for theme changes */
 * {
-  transition-property: background-color, border-color, color, fill, stroke;
+  transition-property: background-color, border-color, color, fill, stroke, transform, opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
+  transition-duration: 300ms;
 }
 
 /* Prevent transition on page load */
 .no-transition * {
   transition: none !important;
+}
+
+/* 3D Perspective Utility */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
 }
