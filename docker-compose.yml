@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  cloudops-desk:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cloudops-desk-website
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    networks:
+      - cloudops-network
+    healthcheck:
+      test: [ "CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    labels:
+      - "com.cloudops.description=CloudOps Desk Website"
+      - "com.cloudops.version=1.0.0"
+
+networks:
+  cloudops-network:
+    driver: bridge
