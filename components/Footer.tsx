@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
                 </Button>
               </a>
             </div>
-            <a href="https://www.linkedin.com/company/cloudops-desk/posts/?feedView=all" target="_blank" rel="noreferrer" className="group">
+            <a href="https://www.linkedin.com/company/cloudopsdesk/posts/?feedView=all" target="_blank" rel="noreferrer" className="group">
               <Button variant="secondary" className="w-full h-20 text-lg justify-start px-8 rounded-[2rem] border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white/5 transition-all hover:border-primary-500/30">
                 <div className="p-3 bg-primary-500/10 rounded-xl mr-4 text-primary-500 group-hover:scale-110 transition-transform">
                   <Linkedin className="w-6 h-6" />
