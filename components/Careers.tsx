@@ -24,7 +24,7 @@ const jobs = [
 
 const Careers: React.FC = () => {
   return (
-    
+
     <section className="pt-32 pb-24 min-h-screen relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
@@ -33,7 +33,7 @@ const Careers: React.FC = () => {
             Join Our Team
           </h2>
           <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
-            We are looking for passionate individuals to help us grow and deliver great products to our cliemts.
+            We are looking for passionate individuals to help us grow and deliver great products to our clients.
           </p>
         </div>
 
@@ -49,9 +49,9 @@ const Careers: React.FC = () => {
                   {job.type}
                 </span>
               </div>
-              
+
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">{job.title}</h3>
-              
+
               <div className="flex flex-wrap gap-4 mb-6 text-sm text-slate-500 dark:text-slate-400">
                 <div className="flex items-center gap-1">
                   <MapPin className="w-4 h-4" /> {job.location}
@@ -65,8 +65,8 @@ const Careers: React.FC = () => {
                 {job.description}
               </p>
 
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="w-full justify-center group/btn"
                 onClick={() => window.location.href = 'mailto:careers@yourdomain.com?subject=Application for ' + job.title}
               >

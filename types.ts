@@ -22,4 +22,6 @@ export enum ServiceType {
   SECURITY_AUDIT = 'Security Audit',
   CI_CD_PIPELINE = 'CI/CD Pipelines',
   TRAINING = 'Corporate Training',
+  INTERVIEW_PREP = 'Interview Preparation',
+  JOB_SUPPORT = 'Job Support & Mentorship',
 }
