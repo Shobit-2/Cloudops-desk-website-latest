@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
               </a>
               <a href="https://t.me/devops_freelancers_india" target="_blank" rel="noreferrer" className="group">
                 <Button variant="secondary" className="w-full h-16 sm:h-20 text-base sm:text-lg justify-start px-4 sm:px-8 rounded-[2rem] border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white/5 transition-all">
-                  <div className="p-2 sm:p-3 bg-sky-500/10 rounded-xl mr-3 sm:mr-4 text-sky-500 group-hover:scale-110 transition-transform">
+                  <div className="p-2 sm:p-3 bg-primary-500/10 rounded-xl mr-3 sm:mr-4 text-primary-500 group-hover:scale-110 transition-transform">
                     <Send className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <div className="text-left">

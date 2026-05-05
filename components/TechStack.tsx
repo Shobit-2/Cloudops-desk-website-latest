@@ -63,7 +63,7 @@ const TechStack: React.FC = () => {
               <div className="flex flex-wrap items-center gap-8 md:gap-14 opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 duration-700">
                 {cat.techs.map((tech) => (
                   <div key={tech.name} className="flex flex-col items-center gap-2 group">
-                    <img src={tech.icon} alt={tech.name}
+                    <img src={tech.icon} alt={tech.name} loading="lazy"
                       className="w-10 h-10 transition-transform duration-500 group-hover:scale-125 group-hover:-rotate-6" />
                     <span className="text-[9px] font-bold uppercase tracking-widest text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity">{tech.name}</span>
                   </div>

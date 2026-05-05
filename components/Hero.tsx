@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
               </div>
 
               {[
-                { icon: <Briefcase className="w-5 h-5" />, label: 'Profile Marketing', sub: 'Resume · LinkedIn · Job Apps', color: 'text-sky-400', bg: 'bg-sky-500/10', slug: 'profile-marketing' },
+                { icon: <Briefcase className="w-5 h-5" />, label: 'Profile Marketing', sub: 'Resume · LinkedIn · Job Apps', color: 'text-primary-400', bg: 'bg-primary-500/10', slug: 'profile-marketing' },
                 { icon: <Target className="w-5 h-5" />, label: 'Interview Support', sub: 'Mock Interviews · Live Guidance', color: 'text-amber-400', bg: 'bg-amber-500/10', slug: 'interview-support' },
                 { icon: <Users className="w-5 h-5" />, label: 'Corporate Training', sub: 'Career Switch · Tech Upskilling', color: 'text-emerald-400', bg: 'bg-emerald-500/10', slug: 'corporate-training' },
                 { icon: <TrendingUp className="w-5 h-5" />, label: 'On-Job Support', sub: '24/7 Real-time Task Help', color: 'text-purple-400', bg: 'bg-purple-500/10', slug: 'job-support' },

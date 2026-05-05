@@ -56,7 +56,7 @@ const TechIconRow: React.FC<{ techs: { name: string; icon: string }[] }> = ({ te
   <div className="flex flex-wrap items-center gap-4 mt-6">
     {techs.map((tech) => (
       <div key={tech.name} className="flex flex-col items-center gap-1.5 group/icon">
-        <img src={tech.icon} alt={tech.name}
+        <img src={tech.icon} alt={tech.name} loading="lazy"
           className="w-8 h-8 transition-transform duration-500 group-hover/icon:scale-125 group-hover/icon:-rotate-6 grayscale hover:grayscale-0" />
         <span className="text-[8px] font-bold uppercase tracking-widest text-slate-500 opacity-0 group-hover/icon:opacity-100 transition-opacity">{tech.name}</span>
       </div>
@@ -131,7 +131,7 @@ const Expertise: React.FC = () => {
           </GlassCard>
 
           <GlassCard className="md:col-span-4 group flex flex-col justify-center" hoverEffect>
-            <div className="p-4 bg-sky-500/10 rounded-2xl text-sky-500 w-fit mb-6 group-hover:rotate-12 transition-transform">
+            <div className="p-4 bg-primary-500/10 rounded-2xl text-primary-500 w-fit mb-6 group-hover:rotate-12 transition-transform">
               <Settings className="w-8 h-8" />
             </div>
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">ServiceNow</h3>
