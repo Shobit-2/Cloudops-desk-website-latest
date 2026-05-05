@@ -61,7 +61,7 @@ function App() {
             <Route path="/job-support" element={<JobSupportPage />} />
             <Route path="/resume-linkedin-optimization" element={<ResumeLinkedInPage />} />
             <Route path="/mock-interview-preparation" element={<MockInterviewPage />} />
-            <Route path="/profile-marketing" element={<ProfileMarketingPage />} />
+            <Route path="/job-application" element={<ProfileMarketingPage />} />
             <Route path="/interview-support" element={<InterviewSupportPage />} />
             <Route path="/certification-guidance" element={<CertificationGuidancePage />} />
             <Route path="/assignment-support" element={<AssignmentSupportPage />} />

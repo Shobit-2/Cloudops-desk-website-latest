@@ -45,10 +45,10 @@ const techIcons = {
     { name: 'Oracle', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg' },
   ],
   serviceNow: [
-    { name: 'ServiceNow', icon: 'https://companieslogo.com/img/orig/NOW-27b6dced.png' },
+    { name: 'ServiceNow', icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2381B5A1'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 17.5c-3.03 0-5.5-2.47-5.5-5.5S8.97 8.5 12 8.5s5.5 2.47 5.5 5.5-2.47 5.5-5.5 5.5zm0-8.5c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z'/%3E%3C/svg%3E" },
   ],
   workday: [
-    { name: 'Workday', icon: 'https://companieslogo.com/img/orig/WDAY-8e89f571.png' },
+    { name: 'Workday', icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F68D2E'%3E%3Cpath d='M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 3a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zm0 14c-2.76 0-5.18-1.41-6.6-3.55.03-2.19 4.4-3.39 6.6-3.39 2.19 0 6.57 1.2 6.6 3.39A7.97 7.97 0 0 1 12 19z'/%3E%3C/svg%3E" },
   ],
 };
 
@@ -56,7 +56,7 @@ const TechIconRow: React.FC<{ techs: { name: string; icon: string }[] }> = ({ te
   <div className="flex flex-wrap items-center gap-4 mt-6">
     {techs.map((tech) => (
       <div key={tech.name} className="flex flex-col items-center gap-1.5 group/icon">
-        <img src={tech.icon} alt={tech.name} loading="lazy"
+        <img src={tech.icon} alt={tech.name}
           className="w-8 h-8 transition-transform duration-500 group-hover/icon:scale-125 group-hover/icon:-rotate-6 grayscale hover:grayscale-0" />
         <span className="text-[8px] font-bold uppercase tracking-widest text-slate-500 opacity-0 group-hover/icon:opacity-100 transition-opacity">{tech.name}</span>
       </div>
@@ -131,7 +131,7 @@ const Expertise: React.FC = () => {
           </GlassCard>
 
           <GlassCard className="md:col-span-4 group flex flex-col justify-center" hoverEffect>
-            <div className="p-4 bg-primary-500/10 rounded-2xl text-primary-500 w-fit mb-6 group-hover:rotate-12 transition-transform">
+            <div className="p-4 bg-sky-500/10 rounded-2xl text-sky-500 w-fit mb-6 group-hover:rotate-12 transition-transform">
               <Settings className="w-8 h-8" />
             </div>
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">ServiceNow</h3>

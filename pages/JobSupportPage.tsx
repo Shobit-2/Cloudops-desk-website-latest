@@ -5,15 +5,14 @@ import QuoteForm from '../components/QuoteForm';
 const schema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "IT Job Support India",
+  "name": "IT Job Support",
   "provider": {
     "@type": "Organization",
     "name": "CloudOpsDesk",
     "url": "https://cloudopsdesk.in"
   },
   "serviceType": "IT Job Support",
-  "description": "Real-time IT job support for DevOps, Full Stack, Data Engineering, AI/ML, Cloud and QA professionals in India. Get expert help with daily work tasks, troubleshooting and project delivery.",
-  "areaServed": { "@type": "Country", "name": "India" },
+  "description": "Real-time IT job support for DevOps, Full Stack, Data Engineering, AI/ML, Cloud and QA professionals. Get expert help with daily work tasks, troubleshooting and project delivery.",
   "audience": {
     "@type": "Audience",
     "audienceType": "IT professionals, freshers, working professionals"
@@ -24,15 +23,15 @@ const JobSupportPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="IT Job Support India | Real-Time Help for All Tech Domains | CloudOpsDesk"
-        description="Expert IT job support for DevOps, Full Stack, Data and AI professionals in India. Real-time help from certified engineers. Flexible timing. Contact CloudOpsDesk on WhatsApp for instant help!"
+        title="IT Job Support | Real-Time Help for All Tech Domains | CloudOpsDesk"
+        description="Expert IT job support for DevOps, Full Stack, Data and AI professionals. Real-time help from certified engineers. Flexible timing. Contact CloudOpsDesk on WhatsApp for instant help!"
         canonical="/job-support"
-        keywords="it job support india, real time it job support, devops job support, full stack job support, data engineer job support, ai engineer job support, online job assistance"
+        keywords="it job support, real time it job support, devops job support, full stack job support, data engineer job support, ai engineer job support, online job assistance"
         schema={schema}
       />
       <section className="pt-32 pb-20 px-4 max-w-6xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-          IT Job Support India — Real-Time Help for All Tech Domains
+          IT Job Support — Real-Time Help for All Tech Domains
         </h1>
         <p className="text-lg text-slate-600 dark:text-slate-300 mb-4 max-w-3xl">
           Struggling with daily work tasks at your new job? CloudOpsDesk provides 24/7 real-time IT job support from senior engineers across all major technology domains.
@@ -105,8 +104,8 @@ const JobSupportPage: React.FC = () => {
           </div>
           <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm text-center">
             <div className="text-3xl mb-3">💰</div>
-            <h3 className="font-semibold text-slate-900 dark:text-white mb-2">India Pricing</h3>
-            <p className="text-sm text-slate-600 dark:text-slate-400">Affordable monthly plans starting from ₹4,999/month</p>
+            <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Affordable Pricing</h3>
+            <p className="text-sm text-slate-600 dark:text-slate-400">Flexible monthly plans tailored to your needs</p>
           </div>
           <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm text-center">
             <div className="text-3xl mb-3">🖥️</div>

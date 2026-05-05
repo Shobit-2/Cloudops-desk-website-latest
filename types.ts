@@ -16,11 +16,11 @@ export interface EngagementCardProps {
 }
 
 export enum ServiceType {
-  DEVOPS = 'DevOps Implementation',
-  CLOUD_MIGRATION = 'Cloud Migration',
-  K8S_MANAGEMENT = 'Kubernetes Management',
-  SECURITY_AUDIT = 'Security Audit',
-  CI_CD_PIPELINE = 'CI/CD Pipelines',
+  // DEVOPS = 'DevOps Implementation',
+  // CLOUD_MIGRATION = 'Cloud Migration',
+  // K8S_MANAGEMENT = 'Kubernetes Management',
+  // SECURITY_AUDIT = 'Security Audit',
+  // CI_CD_PIPELINE = 'CI/CD Pipelines',
   TRAINING = 'Corporate Training',
   INTERVIEW_PREP = 'Interview Preparation',
   JOB_SUPPORT = 'On-Job Support',

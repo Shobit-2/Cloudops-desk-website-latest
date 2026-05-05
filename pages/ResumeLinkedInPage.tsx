@@ -5,29 +5,28 @@ import QuoteForm from '../components/QuoteForm';
 const schema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Resume Writing & LinkedIn Optimization India",
+  "name": "Resume Writing & LinkedIn Optimization",
   "provider": { "@type": "Organization", "name": "CloudOpsDesk", "url": "https://cloudopsdesk.in" },
   "serviceType": "Resume Writing and LinkedIn Optimization",
-  "description": "Professional ATS-friendly resume writing and LinkedIn profile optimization service for IT and non-IT professionals in India.",
-  "areaServed": { "@type": "Country", "name": "India" }
+  "description": "Professional ATS-friendly resume writing and LinkedIn profile optimization service for IT and non-IT professionals."
 };
 
 const ResumeLinkedInPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Resume Writing & LinkedIn Optimization India | ATS-Friendly | CloudOpsDesk"
-        description="Professional ATS-friendly resume writing and LinkedIn profile optimization for IT and non-IT professionals in India. Get more interview calls. 48-hour delivery. 1000+ resumes done."
+        title="Resume Writing & LinkedIn Optimization | ATS-Friendly | CloudOpsDesk"
+        description="Professional ATS-friendly resume writing and LinkedIn profile optimization for IT and non-IT professionals. Get more interview calls. 48-hour delivery. 1000+ resumes done."
         canonical="/resume-linkedin-optimization"
-        keywords="resume writing service india, linkedin profile optimization india, ats resume writing india, professional resume india, devops resume, data engineer resume, linkedin optimization it professionals"
+        keywords="resume writing service, linkedin profile optimization, ats resume writing, professional resume, devops resume, data engineer resume, linkedin optimization it professionals"
         schema={schema}
       />
       <section className="pt-32 pb-20 px-4 max-w-6xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-          Resume Writing & LinkedIn Optimization India
+          Resume Writing & LinkedIn Optimization
         </h1>
         <p className="text-lg text-slate-600 dark:text-slate-300 mb-4 max-w-3xl">
-          Your resume not getting callbacks? Our certified writers create ATS-friendly resumes and optimize LinkedIn profiles to get you noticed by top recruiters across India.
+          Your resume not getting callbacks? Our certified writers create ATS-friendly resumes and optimize LinkedIn profiles to get you noticed by top recruiters.
         </p>
         <div className="flex flex-wrap gap-3 mb-10">
           <span className="bg-sky-100 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300 px-3 py-1 rounded-full text-sm font-medium">1000+ Resumes Done</span>

@@ -5,26 +5,25 @@ import QuoteForm from '../components/QuoteForm';
 const schema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "IT Certification Guidance India",
+  "name": "IT Certification Guidance",
   "provider": { "@type": "Organization", "name": "CloudOpsDesk", "url": "https://cloudopsdesk.in" },
   "serviceType": "Certification Guidance",
-  "description": "Personalized IT certification guidance for AWS, Azure, GCP, Kubernetes (CKA), Terraform, Databricks, and more for professionals in India.",
-  "areaServed": { "@type": "Country", "name": "India" }
+  "description": "Personalized IT certification guidance for AWS, Azure, GCP, Kubernetes (CKA), Terraform, Databricks, and more for professionals."
 };
 
 const CertificationGuidancePage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="IT Certification Guidance India | AWS, Azure, GCP, K8s, Data | CloudOpsDesk"
+        title="IT Certification Guidance | AWS, Azure, GCP, K8s, Data | CloudOpsDesk"
         description="Confused about which certification to pursue? Our experts guide you through the right path, study materials, exam strategies and hands-on prep. AWS, Azure, GCP, CKA, Terraform & more."
         canonical="/certification-guidance"
-        keywords="aws certification guidance india, azure certification help india, cka certification preparation india, terraform certification india, google cloud certification guidance, databricks certification india, it certification guidance"
+        keywords="aws certification guidance, azure certification help, cka certification preparation, terraform certification, google cloud certification guidance, databricks certification, it certification guidance"
         schema={schema}
       />
       <section className="pt-32 pb-20 px-4 max-w-6xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-          IT Certification Guidance India
+          IT Certification Guidance
         </h1>
         <p className="text-lg text-slate-600 dark:text-slate-300 mb-4 max-w-3xl">
           Get personalized certification roadmaps, study materials, exam strategies, and hands-on lab practice to pass your cloud and DevOps certifications on the first attempt.

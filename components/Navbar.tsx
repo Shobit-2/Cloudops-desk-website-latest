@@ -4,11 +4,39 @@ import { Theme } from '../types';
 import Button from './ui/Button';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
-const serviceDropdownItems = [
-  { label: 'Profile Marketing', path: '/services#profile-marketing' },
-  { label: 'Job Support', path: '/services#job-support' },
-  { label: 'Interview Support', path: '/services#interview-support' },
-  { label: 'Corporate Training', path: '/services#corporate-training' },
+const serviceCategories = [
+  {
+    label: 'Profile Marketing',
+    path: '/job-application',
+    subItems: [
+      { label: 'Resume & LinkedIn', path: '/resume-linkedin-optimization' },
+      { label: 'Job Application', path: '/job-application' },
+    ],
+  },
+  {
+    label: 'On Job Support',
+    path: '/job-support',
+    subItems: [
+      { label: 'IT Job Support', path: '/job-support' },
+    ],
+  },
+  {
+    label: 'Interview Support',
+    path: '/interview-support',
+    subItems: [
+      { label: 'Mock Interview Prep', path: '/mock-interview-preparation' },
+      { label: 'Assignment Support', path: '/assignment-support' },
+      { label: 'Interview Support', path: '/interview-support' },
+    ],
+  },
+  {
+    label: 'Corporate Training',
+    path: '/corporate-training',
+    subItems: [
+      { label: 'Hands-on Training', path: '/corporate-training' },
+      { label: 'Certification Guidance', path: '/certification-guidance' },
+    ],
+  },
 ];
 
 const Navbar: React.FC = () => {
@@ -96,27 +124,42 @@ const Navbar: React.FC = () => {
               <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
             </button>
             <div
-              className={`absolute top-full left-0 mt-2 w-56 bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-2xl shadow-xl overflow-hidden transition-all duration-300 ${isServicesOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'}`}
+              className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[600px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-2xl shadow-xl overflow-hidden transition-all duration-300 ${isServicesOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'}`}
               onMouseLeave={() => setIsServicesOpen(false)}
             >
-              <div className="py-2">
+              <div className="p-4">
                 <Link
                   to="/services"
-                  className="block px-5 py-3 text-sm font-bold text-primary-500 hover:bg-slate-50 dark:hover:bg-white/5 transition-colors border-b border-slate-100 dark:border-white/5"
+                  className="block px-4 py-2.5 text-sm font-bold text-primary-500 hover:bg-slate-50 dark:hover:bg-white/5 transition-colors rounded-xl border-b border-slate-100 dark:border-white/5 mb-3"
                   onClick={() => setIsServicesOpen(false)}
                 >
                   All Services
                 </Link>
-                {serviceDropdownItems.map((item) => (
-                  <Link
-                    key={item.label}
-                    to={item.path}
-                    className="block px-5 py-3 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-500 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-white/5 transition-colors"
-                    onClick={() => setIsServicesOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                <div className="grid grid-cols-2 gap-4">
+                  {serviceCategories.map((category) => (
+                    <div key={category.label}>
+                      <Link
+                        to={category.path}
+                        className="block px-3 py-1.5 text-sm font-black text-slate-900 dark:text-white hover:text-primary-500 transition-colors"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        {category.label}
+                      </Link>
+                      <div className="pl-3 mt-1 space-y-0.5 border-l-2 border-primary-500/20">
+                        {category.subItems.map((item) => (
+                          <Link
+                            key={item.label}
+                            to={item.path}
+                            className="block px-3 py-1.5 text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-primary-500 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-white/5 rounded-lg transition-colors"
+                            onClick={() => setIsServicesOpen(false)}
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -177,17 +220,27 @@ const Navbar: React.FC = () => {
               Services
               <ChevronDown className={`w-5 h-5 transition-transform ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
             </button>
-            <div className={`overflow-hidden transition-all duration-300 ${isMobileServicesOpen ? 'max-h-60 mt-3' : 'max-h-0'}`}>
-              <div className="pl-4 space-y-3 border-l-2 border-primary-500/30">
+            <div className={`overflow-hidden transition-all duration-300 ${isMobileServicesOpen ? 'max-h-[600px] mt-3' : 'max-h-0'}`}>
+              <div className="pl-4 space-y-4 border-l-2 border-primary-500/30">
                 <Link to="/services" onClick={() => setIsMobileMenuOpen(false)}
                   className="block text-lg font-bold text-primary-500">
                   All Services
                 </Link>
-                {serviceDropdownItems.map((item) => (
-                  <Link key={item.label} to={item.path} onClick={() => setIsMobileMenuOpen(false)}
-                    className="block text-lg font-medium text-slate-600 dark:text-slate-400 hover:text-primary-500 transition-colors">
-                    {item.label}
-                  </Link>
+                {serviceCategories.map((category) => (
+                  <div key={category.label}>
+                    <Link to={category.path} onClick={() => setIsMobileMenuOpen(false)}
+                      className="block text-base font-black text-slate-900 dark:text-white hover:text-primary-500 transition-colors">
+                      {category.label}
+                    </Link>
+                    <div className="pl-4 mt-1 space-y-1">
+                      {category.subItems.map((item) => (
+                        <Link key={item.label} to={item.path} onClick={() => setIsMobileMenuOpen(false)}
+                          className="block text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-primary-500 transition-colors">
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>

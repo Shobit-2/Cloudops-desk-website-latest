@@ -5,21 +5,20 @@ import QuoteForm from '../components/QuoteForm';
 const schema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Assignment Support India",
+  "name": "Technical Assignment Support",
   "provider": { "@type": "Organization", "name": "CloudOpsDesk", "url": "https://cloudopsdesk.in" },
   "serviceType": "Technical Assignment Support",
-  "description": "Expert help with technical coding assignments, take-home projects, and case studies given by recruiters for IT professionals in India.",
-  "areaServed": { "@type": "Country", "name": "India" }
+  "description": "Expert help with technical coding assignments, take-home projects, and case studies given by recruiters for IT professionals."
 };
 
 const AssignmentSupportPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Coding & Technical Assignment Help India | CloudOpsDesk"
+        title="Coding & Technical Assignment Help | CloudOpsDesk"
         description="Need help with a take-home coding assignment or technical case study from a recruiter? Our experts help you deliver quality work on time. DevOps, Full Stack, Data, AI & QA assignments covered."
         canonical="/assignment-support"
-        keywords="it assignment help india, coding assignment help india, take home coding assignment help, technical assignment support india, devops assignment help, data engineering assignment help"
+        keywords="it assignment help, coding assignment help, take home coding assignment help, technical assignment support, devops assignment help, data engineering assignment help"
         schema={schema}
       />
       <section className="pt-32 pb-20 px-4 max-w-6xl mx-auto">

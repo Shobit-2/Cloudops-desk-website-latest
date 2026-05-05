@@ -5,11 +5,10 @@ import QuoteForm from '../components/QuoteForm';
 const schema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Live Interview Support India",
+  "name": "Live Interview Support",
   "provider": { "@type": "Organization", "name": "CloudOpsDesk", "url": "https://cloudopsdesk.in" },
   "serviceType": "Live Interview Support",
-  "description": "Real-time technical interview guidance and coaching during live interview rounds for IT professionals in India.",
-  "areaServed": { "@type": "Country", "name": "India" }
+  "description": "Real-time technical interview guidance and coaching during live interview rounds for IT professionals."
 };
 
 const InterviewSupportPage: React.FC = () => {
@@ -19,7 +18,7 @@ const InterviewSupportPage: React.FC = () => {
         title="Live Interview Support | Technical Interview Guidance | CloudOpsDesk"
         description="Get real-time expert guidance during your technical interview rounds. 1-on-1 live coaching from senior engineers. DevOps, Cloud, Full Stack, Data & AI interview support available."
         canonical="/interview-support"
-        keywords="live interview support india, technical interview assistance, real time interview guidance india, interview coaching live, technical interview help india online"
+        keywords="live interview support, technical interview assistance, real time interview guidance, interview coaching live, technical interview help online"
         schema={schema}
       />
       <section className="pt-32 pb-20 px-4 max-w-6xl mx-auto">

@@ -5,26 +5,25 @@ import QuoteForm from '../components/QuoteForm';
 const schema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Mock Interview Preparation India",
+  "name": "Mock Interview Preparation",
   "provider": { "@type": "Organization", "name": "CloudOpsDesk", "url": "https://cloudopsdesk.in" },
   "serviceType": "Mock Interview Preparation",
-  "description": "1-on-1 mock interview preparation with domain experts for DevOps, Full Stack, Data Engineering, AI/ML, Cloud and QA professionals in India.",
-  "areaServed": { "@type": "Country", "name": "India" }
+  "description": "1-on-1 mock interview preparation with domain experts for DevOps, Full Stack, Data Engineering, AI/ML, Cloud and QA professionals."
 };
 
 const MockInterviewPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Mock Interview Preparation India | 1-on-1 Coaching | CloudOpsDesk"
+        title="Mock Interview Preparation | 1-on-1 Coaching | CloudOpsDesk"
         description="Not confident about your technical interview? Practice with real industry experts. Detailed feedback after every session. All IT domains covered. 300+ candidates helped crack interviews."
         canonical="/mock-interview-preparation"
-        keywords="mock interview india online, devops mock interview, full stack developer mock interview, data engineer mock interview india, interview coaching india, technical interview preparation"
+        keywords="mock interview online, devops mock interview, full stack developer mock interview, data engineer mock interview, interview coaching, technical interview preparation"
         schema={schema}
       />
       <section className="pt-32 pb-20 px-4 max-w-6xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-          Mock Interview Preparation India
+          Mock Interview Preparation
         </h1>
         <p className="text-lg text-slate-600 dark:text-slate-300 mb-4 max-w-3xl">
           Crack your dream tech job with our expert-led 1-on-1 mock interview sessions. Realistic simulations with real company questions and detailed performance feedback.
