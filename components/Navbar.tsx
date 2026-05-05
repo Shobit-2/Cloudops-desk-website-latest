@@ -91,18 +91,18 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${isScrolled
-      ? 'py-4 bg-white/80 dark:bg-slate-950/80 backdrop-blur-2xl border-b border-slate-200 dark:border-white/5 shadow-sm'
-      : 'py-8 bg-transparent'
+      ? 'py-3 sm:py-4 bg-white/80 dark:bg-slate-950/80 backdrop-blur-2xl border-b border-slate-200 dark:border-white/5 shadow-sm'
+      : 'py-4 sm:py-8 bg-transparent'
       }`}>
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <div className="flex items-center gap-3 cursor-pointer group" onClick={scrollToTop}>
-          <div className="relative">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 flex items-center justify-between">
+        <div className="flex items-center gap-2 sm:gap-3 cursor-pointer group min-w-0" onClick={scrollToTop}>
+          <div className="relative flex-shrink-0">
             <div className="absolute inset-0 bg-primary-500 rounded-lg blur opacity-20 group-hover:opacity-40 transition-opacity" />
-            <div className="relative p-2.5 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-white/10 group-hover:border-primary-500/50 transition-all shadow-sm">
-              <Cloud className="w-6 h-6 text-primary-500" />
+            <div className="relative p-2 sm:p-2.5 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-white/10 group-hover:border-primary-500/50 transition-all shadow-sm">
+              <Cloud className="w-5 h-5 sm:w-6 sm:h-6 text-primary-500" />
             </div>
           </div>
-          <span className="text-2xl font-black tracking-tighter text-slate-900 dark:text-white">
+          <span className="text-lg sm:text-2xl font-black tracking-tighter text-slate-900 dark:text-white truncate">
             CloudOps <span className="text-primary-500 font-medium">Desk</span>
           </span>
         </div>
@@ -182,13 +182,13 @@ const Navbar: React.FC = () => {
           </Link>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
           <button onClick={toggleTheme}
-            className="p-3 rounded-2xl text-slate-500 dark:text-slate-400 hover:text-primary-500 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-all border border-transparent hover:border-slate-200 dark:hover:border-white/10 shadow-sm"
+            className="p-2 sm:p-3 rounded-2xl text-slate-500 dark:text-slate-400 hover:text-primary-500 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-all border border-transparent hover:border-slate-200 dark:hover:border-white/10 shadow-sm"
             aria-label="Toggle Theme">
             {theme === Theme.DARK ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </button>
-          <div className="hidden sm:block">
+          <div className="hidden md:block">
             <Link to="/contact">
               <Button variant="primary" className="!px-6 !py-3 text-sm font-black shadow-lg shadow-primary-500/20">
                 Get Started
@@ -196,7 +196,7 @@ const Navbar: React.FC = () => {
             </Link>
           </div>
           <button
-            className="lg:hidden p-3 rounded-2xl bg-slate-100 dark:bg-white/5 text-slate-900 dark:text-white border border-slate-200 dark:border-white/10"
+            className="lg:hidden p-2 sm:p-3 rounded-2xl bg-slate-100 dark:bg-white/5 text-slate-900 dark:text-white border border-slate-200 dark:border-white/10"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>

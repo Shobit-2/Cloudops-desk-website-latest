@@ -1,7 +1,7 @@
 import React from 'react';
 
 const WhatsAppFloat: React.FC = () => {
-  const phoneNumber = '919999999999'; // Replace with actual number
+  const phoneNumber = '919509100704';
   const message = encodeURIComponent('Hi, I need help with [ Job Support / Resume / Interview Prep ]');
 
   return (
