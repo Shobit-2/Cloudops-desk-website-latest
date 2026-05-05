@@ -16,6 +16,22 @@ import AboutPage from './pages/AboutPage';
 import TestimonialsPage from './pages/TestimonialsPage';
 import BlogPage from './pages/BlogPage';
 import ContactPage from './pages/ContactPage';
+import JobSupportPage from './pages/JobSupportPage';
+import ResumeLinkedInPage from './pages/ResumeLinkedInPage';
+import MockInterviewPage from './pages/MockInterviewPage';
+import ProfileMarketingPage from './pages/ProfileMarketingPage';
+import InterviewSupportPage from './pages/InterviewSupportPage';
+import CertificationGuidancePage from './pages/CertificationGuidancePage';
+import AssignmentSupportPage from './pages/AssignmentSupportPage';
+import CorporateTrainingPage from './pages/CorporateTrainingPage';
+import DevOpsJobSupportPage from './pages/DevOpsJobSupportPage';
+import FullStackJobSupportPage from './pages/FullStackJobSupportPage';
+import DataEngineerJobSupportPage from './pages/DataEngineerJobSupportPage';
+import AIMLJobSupportPage from './pages/AIMLJobSupportPage';
+import CloudJobSupportPage from './pages/CloudJobSupportPage';
+import QAJobSupportPage from './pages/QAJobSupportPage';
+import AWSJobSupportPage from './pages/AWSJobSupportPage';
+import InterviewPreparationPage from './pages/InterviewPreparationPage';
 
 const Home = () => (
   <>
@@ -41,6 +57,24 @@ function App() {
             <Route path="/testimonials" element={<TestimonialsPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            {/* Service Landing Pages */}
+            <Route path="/job-support" element={<JobSupportPage />} />
+            <Route path="/resume-linkedin-optimization" element={<ResumeLinkedInPage />} />
+            <Route path="/mock-interview-preparation" element={<MockInterviewPage />} />
+            <Route path="/profile-marketing" element={<ProfileMarketingPage />} />
+            <Route path="/interview-support" element={<InterviewSupportPage />} />
+            <Route path="/certification-guidance" element={<CertificationGuidancePage />} />
+            <Route path="/assignment-support" element={<AssignmentSupportPage />} />
+            <Route path="/corporate-training" element={<CorporateTrainingPage />} />
+            {/* Domain-Specific Job Support Pages */}
+            <Route path="/devops-job-support" element={<DevOpsJobSupportPage />} />
+            <Route path="/aws-job-support" element={<AWSJobSupportPage />} />
+            <Route path="/full-stack-job-support" element={<FullStackJobSupportPage />} />
+            <Route path="/data-engineer-job-support" element={<DataEngineerJobSupportPage />} />
+            <Route path="/ai-ml-job-support" element={<AIMLJobSupportPage />} />
+            <Route path="/cloud-job-support" element={<CloudJobSupportPage />} />
+            <Route path="/qa-job-support" element={<QAJobSupportPage />} />
+            <Route path="/interview-preparation" element={<InterviewPreparationPage />} />
           </Routes>
         </main>
         <Footer />
