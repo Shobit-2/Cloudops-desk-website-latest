@@ -29,7 +29,7 @@ const Careers: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="mb-16 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">
             Join Our Team
           </h2>
           <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">

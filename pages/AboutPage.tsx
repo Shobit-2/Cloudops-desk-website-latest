@@ -1,7 +1,10 @@
 import React from 'react';
 import { Cloud, Users, Target, Award, Zap, Shield, Globe, Heart, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import GlassCard from '../components/ui/GlassCard';
 import Button from '../components/ui/Button';
+import SEOHead from '../components/SEOHead';
+import FAQSection from '../components/FAQSection';
 
 const AboutPage: React.FC = () => {
   React.useEffect(() => {
@@ -32,7 +35,13 @@ const AboutPage: React.FC = () => {
   ];
 
   return (
-    <div className="pt-20 sm:pt-24 md:pt-32 pb-10 sm:pb-20">
+    <>
+      <SEOHead
+        title="About CloudOpsDesk | IT Career Services India"
+        description="Learn about CloudOpsDesk — India's trusted IT career partner for job support, resume optimization, interview prep & corporate training."
+        canonical="/about"
+      />
+      <div className="pt-20 sm:pt-24 md:pt-32 pb-10 sm:pb-20">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-12 sm:mb-16 md:mb-24">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
@@ -170,6 +179,33 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-10 sm:py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <FAQSection faqs={[
+            { question: 'What services does CloudOpsDesk provide?', answer: 'CloudOpsDesk provides comprehensive IT career services including real-time job support for all tech domains (DevOps, Full Stack, Data, AI/ML, Cloud, QA), professional resume writing and LinkedIn optimization, mock interview preparation, live interview support, IT certification guidance, technical assignment help, and corporate team training.' },
+            { question: 'Who can use CloudOpsDesk services?', answer: 'Our services are designed for IT professionals at all career stages — freshers entering the job market, experienced professionals switching roles or domains, employees on probation needing support, candidates preparing for interviews, and organizations looking for corporate training. We also help non-IT professionals with resume and interview services.' },
+            { question: 'How experienced are CloudOpsDesk mentors?', answer: 'All CloudOpsDesk mentors are active industry practitioners with 8+ years of hands-on experience. They are certified professionals (AWS, Azure, GCP, CKA, etc.) who have worked at or hired for top companies including TCS, Infosys, Wipro, Cognizant, Accenture, Amazon, and leading product companies.' },
+            { question: 'Is CloudOpsDesk available outside India?', answer: 'While CloudOpsDesk is headquartered in India, we support professionals globally including India, United States, Canada, United Kingdom, Middle East, and Singapore. All services are delivered online via video call and screen share, making geography irrelevant.' },
+            { question: 'How do I get started with CloudOpsDesk?', answer: 'Getting started is simple — WhatsApp us or fill out the contact form on our website. We will schedule a free 15-minute consultation to understand your needs, recommend the right services, and share pricing. There is no obligation, and you can start the same day.' },
+            { question: 'What makes CloudOpsDesk different from other IT training companies?', answer: 'Unlike traditional training companies that sell pre-recorded courses, CloudOpsDesk provides personalized, 1-on-1, real-time support. Our mentors work with you on your actual job tasks, real interviews, and real career challenges. This practical, hands-on approach delivers results significantly faster than passive learning.' },
+          ]} />
+
+          {/* Services Navigation */}
+          <div className="mb-10">
+            <h2 className="text-2xl font-black text-slate-900 dark:text-white mb-4">Our Services</h2>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/job-support" className="px-4 py-2 bg-white dark:bg-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-primary-500 transition-colors">IT Job Support</Link>
+              <Link to="/resume-linkedin-optimization" className="px-4 py-2 bg-white dark:bg-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-primary-500 transition-colors">Resume & LinkedIn</Link>
+              <Link to="/mock-interview-preparation" className="px-4 py-2 bg-white dark:bg-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-primary-500 transition-colors">Mock Interviews</Link>
+              <Link to="/interview-support" className="px-4 py-2 bg-white dark:bg-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-primary-500 transition-colors">Live Interview Support</Link>
+              <Link to="/certification-guidance" className="px-4 py-2 bg-white dark:bg-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-primary-500 transition-colors">Certification Guidance</Link>
+              <Link to="/corporate-training" className="px-4 py-2 bg-white dark:bg-slate-800 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-primary-500 transition-colors">Corporate Training</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-10">
         <div className="flex flex-col md:flex-row items-center justify-between p-5 sm:p-6 md:p-10 rounded-[2rem] sm:rounded-[2.5rem] bg-slate-900 dark:bg-white/5 border border-white/10 relative overflow-hidden">
@@ -186,6 +222,7 @@ const AboutPage: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

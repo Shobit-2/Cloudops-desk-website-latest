@@ -5,6 +5,7 @@ import maryImg from '../components/mary.jpg';
 import ericImg from '../components/eric.jpg';
 import honorineImg from '../components/honorine.jpeg';
 import michaelImg from '../components/Michael.jpg';
+import SEOHead from '../components/SEOHead';
 
 interface Testimonial {
   name: string;
@@ -83,7 +84,13 @@ const TestimonialsPage: React.FC = () => {
   const t = testimonials[current];
 
   return (
-    <div className="pt-20 sm:pt-24 md:pt-32 pb-10 sm:pb-20 relative overflow-hidden">
+    <>
+      <SEOHead
+        title="Client Testimonials | CloudOpsDesk Reviews"
+        description="Read real reviews from IT professionals who used CloudOpsDesk for job support, resume writing, interview prep & career advancement services."
+        canonical="/testimonials"
+      />
+      <div className="pt-20 sm:pt-24 md:pt-32 pb-10 sm:pb-20 relative overflow-hidden">
       {/* Background Decorations */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-to-br from-primary-500/5 via-transparent to-accent-500/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -210,6 +217,7 @@ const TestimonialsPage: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

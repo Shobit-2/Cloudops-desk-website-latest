@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Base styles and utilities */
 * {
   margin: 0;
@@ -77,9 +81,10 @@ body::before {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-primary-500 dark:from-indigo-300 dark:to-primary-300;
 }
 
-/* Smooth transitions for theme changes */
-* {
-  transition-property: background-color, border-color, color, fill, stroke, transform, opacity;
+/* Smooth transitions for theme changes — only on interactive elements */
+a, button, input, select, textarea,
+[class*="bg-"], [class*="text-"], [class*="border-"] {
+  transition-property: background-color, border-color, color, fill, stroke, opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
 }

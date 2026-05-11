@@ -1,0 +1,92 @@
+# CloudOpsDesk
+
+> India's trusted IT career partner — providing job support, resume optimization, interview preparation, and corporate training for technology professionals.
+
+## About
+
+CloudOpsDesk is an IT career services company based in India that helps technology professionals at every stage of their career. We serve freshers, experienced professionals, and companies looking for team training.
+
+## Services
+
+### IT Job Support
+Real-time 24/7 job support from senior engineers for DevOps, Full Stack, Data Engineering, AI/ML, Cloud and QA professionals. Experts help you complete daily work tasks via screen share.
+
+### Resume & LinkedIn Optimization
+Professional ATS-friendly resume writing and LinkedIn profile optimization. We've crafted 1000+ resumes with a 48-hour turnaround.
+
+### Mock Interview Preparation
+1-on-1 practice sessions with real industry experts. Covers technical interviews, system design, DSA, and behavioral rounds. 300+ candidates helped.
+
+### Profile Marketing / Job Application
+We make your IT profile visible to top recruiters. Candidates start getting interview calls within 7 days.
+
+### Live Interview Support
+Real-time expert guidance during your actual technical interview rounds. 1-on-1 live coaching from senior engineers.
+
+### Certification Guidance
+Expert guidance for AWS, Azure, GCP, Kubernetes (CKA), Terraform and data certifications. Includes study materials, exam strategies and hands-on labs.
+
+### Assignment Support
+Help with take-home coding assignments and technical case studies from recruiters. All tech domains covered.
+
+### Corporate Training
+Hands-on, task-based corporate training for DevOps, DevSecOps, Cloud Engineering, SRE, Platform Engineering and Observability teams.
+
+## Technology Domains Covered
+
+- **DevOps**: AWS, Kubernetes, Terraform, Docker, Jenkins, GitLab CI, ArgoCD
+- **Full Stack**: React, Node.js, Java, Python, Angular, .NET
+- **Data Engineering**: Apache Spark, Snowflake, dbt, Airflow, SQL, Kafka
+- **AI/ML**: TensorFlow, PyTorch, LangChain, MLOps, Generative AI
+- **Cloud**: AWS, Microsoft Azure, Google Cloud Platform (GCP)
+- **QA/Automation**: Selenium, Playwright, Cypress, API Testing, Performance Testing
+
+## Pages
+
+- Home: https://cloudopsdesk.in/
+- Services: https://cloudopsdesk.in/services
+- About: https://cloudopsdesk.in/about
+- Contact: https://cloudopsdesk.in/contact
+- Blog: https://cloudopsdesk.in/blog
+- Testimonials: https://cloudopsdesk.in/testimonials
+- IT Job Support: https://cloudopsdesk.in/job-support
+- Resume & LinkedIn: https://cloudopsdesk.in/resume-linkedin-optimization
+- Mock Interview: https://cloudopsdesk.in/mock-interview-preparation
+- Job Application: https://cloudopsdesk.in/job-application
+- Interview Support: https://cloudopsdesk.in/interview-support
+- Certification Guidance: https://cloudopsdesk.in/certification-guidance
+- Assignment Support: https://cloudopsdesk.in/assignment-support
+- Corporate Training: https://cloudopsdesk.in/corporate-training
+- DevOps Job Support: https://cloudopsdesk.in/devops-job-support
+- AWS Job Support: https://cloudopsdesk.in/aws-job-support
+- Full Stack Job Support: https://cloudopsdesk.in/full-stack-job-support
+- Data Engineer Job Support: https://cloudopsdesk.in/data-engineer-job-support
+- AI/ML Job Support: https://cloudopsdesk.in/ai-ml-job-support
+- Cloud Job Support: https://cloudopsdesk.in/cloud-job-support
+- QA Job Support: https://cloudopsdesk.in/qa-job-support
+- Interview Preparation: https://cloudopsdesk.in/interview-preparation
+
+## Contact
+
+- WhatsApp: +91-9509100704
+- Email: cloudopsdesk@gmail.com
+- LinkedIn: https://www.linkedin.com/company/cloudopsdesk
+- YouTube: https://www.youtube.com/@cloudopsdesk
+- Telegram: https://t.me/devops_freelancers_india
+
+## FAQ
+
+**Q: What is CloudOpsDesk?**
+A: CloudOpsDesk is an IT career services company based in India providing real-time job support, resume writing, mock interviews, profile marketing, certification guidance and corporate training for technology professionals.
+
+**Q: Who can use CloudOpsDesk?**
+A: IT professionals at all levels — freshers, experienced developers, engineers switching careers, and companies needing team training.
+
+**Q: What technologies do you support?**
+A: We cover DevOps, Cloud (AWS/Azure/GCP), Full Stack (React/Node/Java/Python), Data Engineering (Spark/Snowflake), AI/ML, and QA/Automation.
+
+**Q: Is job support available 24/7?**
+A: Yes, our senior engineers are available round the clock for real-time assistance via screen share.
+
+**Q: How does resume writing work?**
+A: We create ATS-optimized resumes tailored to your domain and target roles with a 48-hour turnaround.

@@ -1,8 +1,26 @@
+# CloudOpsDesk — robots.txt
 User-agent: *
 Allow: /
 
-Disallow: /admin/
-Disallow: /cart/
-Disallow: /checkout/
+# Block non-existent admin/internal paths
+Disallow: /api/
+Disallow: /_internal/
 
+# Allow all AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Sitemap
 Sitemap: https://cloudopsdesk.in/sitemap.xml

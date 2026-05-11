@@ -3,6 +3,8 @@ import { useLocation, Link } from 'react-router-dom';
 import { FileText, Linkedin, Send, Shield, BookOpen, Users, Target, Headphones, Zap, CheckCircle, Briefcase, Award, ShieldCheck, Star } from 'lucide-react';
 import GlassCard from '../components/ui/GlassCard';
 import Button from '../components/ui/Button';
+import SEOHead from '../components/SEOHead';
+import FAQSection from '../components/FAQSection';
 
 const services = [
   {
@@ -111,7 +113,13 @@ const ServicesPage: React.FC = () => {
   };
 
   return (
-    <div className="pt-20 sm:pt-24 md:pt-32 pb-10 sm:pb-20">
+    <>
+      <SEOHead
+        title="IT Career Services | Job Support & Training India"
+        description="Explore CloudOpsDesk services: IT job support, resume writing, mock interviews, profile marketing, certification guidance & corporate training."
+        canonical="/services"
+      />
+      <div className="pt-20 sm:pt-24 md:pt-32 pb-10 sm:pb-20">
       {/* Page Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-10 sm:mb-16 md:mb-20 text-center space-y-4 sm:space-y-6">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-500/10 border border-primary-500/20 text-primary-600 dark:text-primary-400 text-xs font-bold tracking-[0.2em] uppercase">
@@ -179,6 +187,18 @@ const ServicesPage: React.FC = () => {
         </section>
       ))}
 
+      {/* FAQ Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 mt-10 sm:mt-16 md:mt-20">
+        <FAQSection faqs={[
+          { question: 'How do I choose the right service for me?', answer: 'It depends on where you are in your career journey. If you are already working and need task help, choose IT Job Support. If you are job searching, start with Resume & LinkedIn Optimization. For interview prep, combine Mock Interviews with Interview Preparation. Not sure? Book a free 15-minute consultation and we will recommend the best path.' },
+          { question: 'Can I use multiple services together?', answer: 'Absolutely, and many clients do. The most popular combinations are Job Support + Resume Optimization for working professionals, and Mock Interview + Live Interview Support + Resume for job seekers. We offer bundled packages at discounted rates for combined services.' },
+          { question: 'How quickly can I get started?', answer: 'You can start the same day for most services. After a brief consultation via WhatsApp, we match you with the right expert and schedule your first session. For urgent needs like same-day interview support, we prioritize immediate matching.' },
+          { question: 'Do you offer refunds if I am not satisfied?', answer: 'We have a satisfaction guarantee for all our services. If you are not happy with the quality of our first session, we will either assign a different expert or provide a full refund. Our 4.9/5 satisfaction rating reflects our commitment to quality.' },
+          { question: 'Are your services available for non-IT professionals?', answer: 'Yes, our resume writing, LinkedIn optimization, mock interview, and interview preparation services are available for professionals in all domains — IT, marketing, finance, operations, HR, and more. IT job support and corporate training are specifically for technology roles.' },
+          { question: 'What is the pricing structure?', answer: 'We offer flexible pricing with hourly, weekly, and monthly plans for job support, per-session pricing for interviews and coaching, and project-based pricing for resumes and assignments. Contact us via WhatsApp for detailed pricing — we customize based on your specific needs.' },
+        ]} />
+      </section>
+
       {/* Bottom CTA */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-10 sm:mt-16 md:mt-20">
         <div className="flex flex-col md:flex-row items-center justify-between p-5 sm:p-6 md:p-10 rounded-[2rem] sm:rounded-[2.5rem] bg-slate-900 dark:bg-white/5 border border-white/10 relative overflow-hidden">
@@ -195,6 +215,7 @@ const ServicesPage: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

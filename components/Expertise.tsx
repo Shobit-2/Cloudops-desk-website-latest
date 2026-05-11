@@ -88,7 +88,7 @@ const Expertise: React.FC = () => {
                 <span className="px-2 py-1 bg-slate-100 dark:bg-white/5 rounded">AZURE</span>
               </div>
             </div>
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white mb-4">Cloud & DevOps</h3>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">Cloud & DevOps</h3>
             <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Architecture design to deployment pipelines — across all major cloud providers.</p>
             <TechIconRow techs={techIcons.cloudDevOps} />
           </GlassCard>

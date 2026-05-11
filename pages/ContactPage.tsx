@@ -2,6 +2,7 @@ import React from 'react';
 import { Mail, MessageCircle, MapPin, Phone } from 'lucide-react';
 import GlassCard from '../components/ui/GlassCard';
 import QuoteForm from '../components/QuoteForm';
+import SEOHead from '../components/SEOHead';
 
 const ContactPage: React.FC = () => {
   React.useEffect(() => {
@@ -9,7 +10,13 @@ const ContactPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="pt-20 sm:pt-24 md:pt-32 pb-10 sm:pb-20">
+    <>
+      <SEOHead
+        title="Contact CloudOpsDesk | Get Free Consultation"
+        description="Contact CloudOpsDesk for IT job support, resume help, mock interviews & corporate training. Free consultation via WhatsApp or email."
+        canonical="/contact"
+      />
+      <div className="pt-20 sm:pt-24 md:pt-32 pb-10 sm:pb-20">
       {/* Page Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-10 sm:mb-16 md:mb-20 text-center space-y-4 sm:space-y-6">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-500/10 border border-primary-500/20 text-primary-600 dark:text-primary-400 text-xs font-bold tracking-[0.2em] uppercase">
@@ -65,6 +72,7 @@ const ContactPage: React.FC = () => {
       {/* Enquiry Form */}
       <QuoteForm />
     </div>
+    </>
   );
 };
 

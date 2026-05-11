@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
             India's #1 B2C Tech Career Platform
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[0.95]">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black tracking-tight text-slate-900 dark:text-white leading-[0.95]">
             Land Your <br />
             <span className="text-gradient">Dream Tech</span>
             <br />Role. Fast.

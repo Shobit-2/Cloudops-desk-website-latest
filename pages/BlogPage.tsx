@@ -1,6 +1,7 @@
 import React from 'react';
 import { Calendar, Clock, ArrowRight, Tag, ExternalLink } from 'lucide-react';
 import GlassCard from '../components/ui/GlassCard';
+import SEOHead from '../components/SEOHead';
 
 interface BlogPost {
   id: string;
@@ -115,7 +116,13 @@ const BlogPage: React.FC = () => {
   const regularPosts = blogPosts.filter((p) => !p.featured);
 
   return (
-    <div className="pt-20 sm:pt-24 md:pt-32 pb-10 sm:pb-20">
+    <>
+      <SEOHead
+        title="Blog | IT Career Tips & Insights | CloudOpsDesk"
+        description="Expert IT career tips, DevOps insights, interview strategies & job market trends from CloudOpsDesk. Stay ahead in your tech career."
+        canonical="/blog"
+      />
+      <div className="pt-20 sm:pt-24 md:pt-32 pb-10 sm:pb-20">
       {/* Page Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-10 sm:mb-16 md:mb-20 text-center space-y-4 sm:space-y-6">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-500/10 border border-primary-500/20 text-primary-600 dark:text-primary-400 text-xs font-bold tracking-[0.2em] uppercase">
@@ -246,6 +253,7 @@ const BlogPage: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
