@@ -5,8 +5,10 @@ Allow: /
 # Block non-existent admin/internal paths
 Disallow: /api/
 Disallow: /_internal/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
 
-# Allow all AI crawlers
+# Allow all AI crawlers explicitly
 User-agent: GPTBot
 Allow: /
 
@@ -22,5 +24,14 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-# Sitemap
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Sitemap & LLM info
 Sitemap: https://cloudopsdesk.in/sitemap.xml

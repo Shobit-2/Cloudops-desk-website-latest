@@ -16,3 +16,12 @@ root.render(
     </HelmetProvider>
   </React.StrictMode>
 );
+
+// Defer noise texture loading to after initial paint
+if (typeof window !== 'undefined') {
+  window.addEventListener('load', () => {
+    requestAnimationFrame(() => {
+      document.body.classList.add('texture-loaded');
+    });
+  });
+}

@@ -26,6 +26,7 @@ export default defineConfig(({ mode }) => {
               react: ['react', 'react-dom'],
               router: ['react-router-dom'],
               icons: ['lucide-react'],
+              helmet: ['react-helmet-async'],
             }
           }
         },
@@ -34,8 +35,11 @@ export default defineConfig(({ mode }) => {
         terserOptions: {
           compress: {
             drop_console: true,
+            passes: 2,
           }
-        }
+        },
+        target: 'es2020',
+        reportCompressedSize: true,
       }
     };
 });

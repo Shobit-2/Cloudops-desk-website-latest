@@ -130,6 +130,9 @@ const TestimonialsPage: React.FC = () => {
                     <img
                       src={t.image}
                       alt={t.name}
+                      loading="lazy"
+                      width="128"
+                      height="128"
                       className="w-28 h-28 sm:w-32 sm:h-32 object-cover rounded-full relative border-[3px] border-white dark:border-slate-700 shadow-2xl"
                     />
                   </div>

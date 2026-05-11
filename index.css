@@ -22,8 +22,8 @@ body {
   position: relative;
 }
 
-/* Premium Noise Texture Overlay */
-body::before {
+/* Premium Noise Texture Overlay — loaded via JS to avoid render blocking */
+body.texture-loaded::before {
   content: "";
   position: fixed;
   top: 0;
@@ -37,7 +37,7 @@ body::before {
   mix-blend-mode: overlay;
 }
 
-.dark body::before {
+.dark body.texture-loaded::before {
   opacity: 0.25;
 }
 

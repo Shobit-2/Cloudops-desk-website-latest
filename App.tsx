@@ -78,7 +78,7 @@ function App() {
       <div className="min-h-screen selection:bg-sky-500/30 transition-colors duration-300 bg-slate-50 dark:bg-slate-950">
         <Navbar />
         <main>
-          <Suspense fallback={<div className="min-h-screen" />}>
+          <Suspense fallback={<div className="min-h-screen" aria-label="Loading page content" role="status" />}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/careers" element={<Careers />} />

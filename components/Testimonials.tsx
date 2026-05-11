@@ -95,6 +95,9 @@ const Testimonials: React.FC = () => {
                   <img
                     src={t.image}
                     alt={t.name}
+                    loading="lazy"
+                    width="112"
+                    height="112"
                     className="w-full h-full object-cover rounded-full relative border-4 border-white dark:border-slate-700 shadow-lg"
                   />
                 </div>

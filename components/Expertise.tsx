@@ -56,7 +56,7 @@ const TechIconRow: React.FC<{ techs: { name: string; icon: string }[] }> = ({ te
   <div className="flex flex-wrap items-center gap-4 mt-6">
     {techs.map((tech) => (
       <div key={tech.name} className="flex flex-col items-center gap-1.5 group/icon">
-        <img src={tech.icon} alt={tech.name}
+        <img src={tech.icon} alt={tech.name} loading="lazy" width="32" height="32"
           className="w-8 h-8 transition-transform duration-500 group-hover/icon:scale-125 group-hover/icon:-rotate-6 grayscale hover:grayscale-0" />
         <span className="text-[8px] font-bold uppercase tracking-widest text-slate-500 opacity-0 group-hover/icon:opacity-100 transition-opacity">{tech.name}</span>
       </div>

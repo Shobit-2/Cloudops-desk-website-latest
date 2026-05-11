@@ -181,6 +181,9 @@ const BlogPage: React.FC = () => {
                   <img
                     src={featuredPost.image}
                     alt={featuredPost.title}
+                    loading="lazy"
+                    width="600"
+                    height="400"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
@@ -202,6 +205,9 @@ const BlogPage: React.FC = () => {
                   <img
                     src={post.image}
                     alt={post.title}
+                    loading="lazy"
+                    width="400"
+                    height="176"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
